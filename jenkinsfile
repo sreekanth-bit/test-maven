@@ -1,0 +1,20 @@
+pipeline{
+agent any
+stages{
+stage(scm){
+steps{
+git URL
+}
+}
+stage(install){
+steps{
+sh "mvn install"
+}
+}
+stage(test){
+steps{
+sh "mvn test"
+}
+}
+}
+}
