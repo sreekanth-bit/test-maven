@@ -3,7 +3,7 @@ agent any
 stages{
 stage(scm){
 steps{
-git URL
+git branch: 'main', credentialsId: 'cee8b5da-0bea-477d-b90e-9d722e4c60db', url: 'https://github.com/sreekanth-bit/test-maven.git'
 }
 }
 stage(install){
